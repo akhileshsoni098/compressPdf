@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PDF Compression</title>
+</head>
+<body>
+    <h1>PDF Compression</h1>
+
+    <form action="/file-upload" method="POST" enctype="multipart/form-data">
+        <label for="pdfFile">Select a PDF file to upload:</label>
+        <input type="file" name="pdf" id="pdfFile" accept=".pdf" required>
+        <br>
+
+        <label for="compressionLevel">Select Compression Level:</label>
+        <select name="compressionLevel" id="compressionLevel">
+            <option value="high">High Compression</option>
+            <option value="medium">Medium Compression</option>
+            <option value="lessCompress">Less Compression</option>
+        </select>
+        <br>
+
+        <button type="submit">Upload and Compress PDF</button>
+    </form>
+</body>
+</html>
