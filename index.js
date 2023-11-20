@@ -38,9 +38,6 @@ app.get("/", async (req, res) => {
     const indexPath = path.join(__dirname, 'index.html');
     res.sendFile(indexPath);
 });
-
-
-
   
 app.post('/file-upload', upload.single('pdf'), (req, res) => {
     if (req?.file) {
@@ -87,7 +84,6 @@ app.post('/file-upload', upload.single('pdf'), (req, res) => {
         res.status(400).json('No file uploaded');
     }
 });
-
 
 
 app.listen(4000, () => {
